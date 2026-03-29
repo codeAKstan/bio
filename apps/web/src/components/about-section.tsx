@@ -35,7 +35,9 @@ export default function AboutSection({
                 </Link>
               </div>
               <div className="leading-relaxed">
-                <div>books</div>
+               <Link href="/books" className="text-white/70">
+                  books.
+                </Link>
               </div>
             </div>
           </div>

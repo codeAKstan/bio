@@ -2,6 +2,7 @@
 import type { StaticImageData } from "next/image";
 import type { RefObject } from "react";
 
+import Link from "next/link";
 import FullImageParallaxSection from "./full-image-parallax-section";
 
 export default function BooksSection({
@@ -32,12 +33,12 @@ export default function BooksSection({
               tangible form.
             </div>
             <div className="mt-6 flex sm:mt-8">
-              <button
-                type="button"
+              <Link
+                href="/books"
                 className="w-full rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15 sm:w-auto"
               >
-                View book
-              </button>
+                View books
+              </Link>
             </div>
           </div>
         </div>
