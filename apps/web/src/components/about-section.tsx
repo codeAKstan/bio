@@ -30,7 +30,15 @@ export default function AboutSection({
             </div>
             <div className="flex gap-6 uppercase sm:gap-10">
               <div className="leading-relaxed">
-                <Link href="/contact" className="text-white/70">
+                <Link
+                  href="#contact"
+                  className="text-white/70"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                    history.replaceState(null, "", "#contact");
+                  }}
+                >
                   contact.
                 </Link>
               </div>
