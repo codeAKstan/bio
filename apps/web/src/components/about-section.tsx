@@ -25,7 +25,7 @@ export default function AboutSection({
         <div className="grid h-svh grid-cols-12 grid-rows-[auto_1fr_auto] gap-x-4 sm:gap-x-6 py-8 sm:py-10 text-white">
           <div className="col-span-12 flex flex-col gap-4 text-[11px] tracking-wide text-white/80 sm:flex-row sm:items-start sm:justify-between sm:text-xs">
             <div className="leading-relaxed">
-              <div className="break-all uppercase sm:break-normal">KANTE@GMAIL.COM</div>
+              <div className="break-all uppercase sm:break-normal">ANNA@GMAIL.COM</div>
               <div>+31 (0)6 53632545</div>
             </div>
             <div className="flex gap-6 uppercase sm:gap-10">
@@ -44,7 +44,7 @@ export default function AboutSection({
 
           <div className="col-span-12 flex items-center justify-center">
             <h1 className="font-serif leading-none tracking-tight text-[clamp(52px,16vw,180px)]">
-              Kant
+              Anna
             </h1>
           </div>
         </div>

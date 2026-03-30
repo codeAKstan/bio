@@ -1,24 +1,28 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import firstImage from "../first.jpg";
+import firstImage from "../first.png";
 import secondImage from "../second.webp";
 import thirdImage from "../third.webp";
+import fourthImage from "../fourth.png";
 import AboutSection from "@/components/about-section";
 import BackgroundSection from "@/components/background-section";
 import BooksSection from "@/components/books-section";
+import ContactSection from "@/components/contact-section";
 import FloatingSectionNav from "@/components/floating-section-nav";
 
 export default function Home() {
   const aboutRef = useRef<HTMLElement | null>(null);
   const backgroundRef = useRef<HTMLElement | null>(null);
   const booksRef = useRef<HTMLElement | null>(null);
+  const contactRef = useRef<HTMLElement | null>(null);
 
   const sections = useMemo(
     () => [
       { id: "about" as const, label: "About", image: firstImage, ref: aboutRef },
       { id: "background" as const, label: "Background", image: secondImage, ref: backgroundRef },
       { id: "books" as const, label: "Books", image: thirdImage, ref: booksRef },
+      { id: "contact" as const, label: "Contact", image: fourthImage, ref: contactRef },
     ],
     [],
   );
@@ -33,11 +37,19 @@ export default function Home() {
       const aboutRect = sections[0].ref.current?.getBoundingClientRect();
       const backgroundRect = sections[1].ref.current?.getBoundingClientRect();
       const booksRect = sections[2].ref.current?.getBoundingClientRect();
+      const contactRect = sections[3].ref.current?.getBoundingClientRect();
 
+      const isContactActive =
+        !!contactRect && contactRect.top <= viewportMid && contactRect.bottom >= viewportMid;
       const isBooksActive = !!booksRect && booksRect.top <= viewportMid && booksRect.bottom >= viewportMid;
       const isBackgroundActive =
         !!backgroundRect && backgroundRect.top <= viewportMid && backgroundRect.bottom >= viewportMid;
       const isAboutActive = !!aboutRect && aboutRect.top <= viewportMid && aboutRect.bottom >= viewportMid;
+
+      if (isContactActive) {
+        setActiveNav((prev) => (prev.id === "contact" ? prev : sections[3]));
+        return;
+      }
 
       if (isBooksActive) {
         setActiveNav((prev) => (prev.id === "books" ? prev : sections[2]));
@@ -81,6 +93,7 @@ export default function Home() {
       <AboutSection sectionRef={aboutRef} image={firstImage} />
       <BackgroundSection sectionRef={backgroundRef} image={secondImage} />
       <BooksSection sectionRef={booksRef} image={thirdImage} />
+      <ContactSection sectionRef={contactRef} image={fourthImage} />
     </main>
   );
 }

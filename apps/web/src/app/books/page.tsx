@@ -200,7 +200,7 @@ export default function BooksPage() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr]">
-          <aside className="space-y-8">
+          <aside className="space-y-8 lg:sticky lg:top-10 lg:self-start lg:max-h-[calc(100svh-5rem)] lg:overflow-auto">
             <div>
               <div className="text-xs font-semibold tracking-wide text-foreground">FILTER BY PRICE</div>
               <div className="mt-4 flex items-end gap-3">
