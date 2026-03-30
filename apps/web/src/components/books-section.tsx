@@ -1,5 +1,6 @@
 "use client";
 import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
 import { X } from "lucide-react";
 import { useEffect, useRef, useState, type RefObject } from "react";
 
@@ -18,6 +19,7 @@ export default function BooksSection({
   image: StaticImageData;
 }) {
   const [open, setOpen] = useState(false);
+  const [enableOverlay, setEnableOverlay] = useState(false);
   const books = [book1, book2, book3, book4, book5];
   const pages = Array.from({ length: Math.ceil(books.length / 2) }, (_, i) => {
     const left = books[i * 2];
@@ -26,6 +28,19 @@ export default function BooksSection({
   });
   const [spread, setSpread] = useState(0);
   const wheelLockRef = useRef(0);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("matchMedia" in window)) {
+      setEnableOverlay(true);
+      return;
+    }
+
+    const media = window.matchMedia("(min-width: 640px) and (pointer: fine)");
+    const update = () => setEnableOverlay(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -63,15 +78,17 @@ export default function BooksSection({
               tangible form.
             </div>
             <div className="mt-6 flex sm:mt-8">
-              <button
-                type="button"
-                onClick={() => {
+              <Link
+                href="/books"
+                onClick={(e) => {
+                  if (!enableOverlay) return;
+                  e.preventDefault();
                   setOpen(true);
                 }}
                 className="w-full rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15 sm:w-auto"
               >
                 View books
-              </button>
+              </Link>
             </div>
           </div>
         </div>
