@@ -1,1 +1,66 @@
 @import "@bio/ui/globals.css";
+
+@media (hover: hover) and (pointer: fine) {
+  html[data-custom-cursor="on"],
+  html[data-custom-cursor="on"] * {
+    cursor: none !important;
+  }
+
+  html[data-custom-cursor="on"] input,
+  html[data-custom-cursor="on"] textarea,
+  html[data-custom-cursor="on"] select,
+  html[data-custom-cursor="on"] [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
+
+.bio-cursor-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  transform: translate3d(-100px, -100px, 0);
+}
+
+.bio-cursor {
+  position: relative;
+  height: 56px;
+  width: 56px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.88);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 14px 30px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 150ms ease,
+    transform 140ms ease;
+}
+
+.bio-cursor::before,
+.bio-cursor::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.92);
+  transform: translate(-50%, -50%);
+}
+
+.bio-cursor::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.bio-cursor-wrap[data-visible="false"] .bio-cursor,
+.bio-cursor-wrap[data-suppressed="true"] .bio-cursor {
+  opacity: 0;
+}
+
+.bio-cursor-wrap[data-pressed="true"] .bio-cursor {
+  transform: scale(0.92);
+}
