@@ -64,10 +64,7 @@ export default function AboutSection({
 
           <div className="col-span-12 md:col-span-7 md:pl-6">
             <div className="max-w-2xl font-serif leading-[1.05] tracking-tight text-[clamp(22px,4.6vw,44px)]">
-              Kante smith joshua is a writter and a lecturer  from the Netherlands. For over two decades, he
-              has worked for brands such as Nikkie, Esqualo, Junkies Magazine, Ibana, Rino & Pelle, and many more.
-              His passion lies in using the subtle interplay of styles, lighting, and colors to bring creative
-              visions to life.
+              Anna Kate is a writer and lecturer based in the Nigeria. With over two decades of experience, she has collaborated with renowned brands including Nikkie, Esqualo, Junkies Magazine, Ibana, and Rino & Pelle, among others. Her work is driven by a deep passion for storytelling, where she skillfully blends style, lighting, and color to bring creative ideas vividly to life.
             </div>
           </div>
 

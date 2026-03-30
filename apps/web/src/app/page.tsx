@@ -2,8 +2,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import firstImage from "../first.png";
-import secondImage from "../second.webp";
-import thirdImage from "../third.webp";
+import secondImage from "../second.png";
+import thirdImage from "../third.png";
 import fourthImage from "../fourth.png";
 import AboutSection from "@/components/about-section";
 import BackgroundSection from "@/components/background-section";

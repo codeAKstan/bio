@@ -28,10 +28,9 @@ export default function BackgroundSection({
           </div>
           <div className="col-span-12 md:col-span-5">
             <div className="font-serif leading-[1.05] tracking-tight text-[clamp(20px,4.4vw,40px)]">
-              Creativity has woven its way through every chapter of Otto&apos;s life, seamlessly transitioning from
-              spinning beats as a DJ and producer to crafting captivating images as a model and photographer.
-              He&apos;s discovered that whether he&apos;s captivated by the shapes and composition of a photograph or the
-              rhythm and mood of a song, it all springs from the same well of inspiration within.
+             Creativity has been a defining thread throughout Anna’s life, 
+             evolving seamlessly from one chapter to the next. Whether expressed through her writing or her work as a lecturer, her ability to shape ideas and bring them to life remains constant. Inspired by the structure of language and the rhythm of storytelling, everything 
+             she creates flows from the same deep well of imagination within her.
             </div>
           </div>
         </div>
@@ -42,8 +41,8 @@ export default function BackgroundSection({
             <div className="mb-6 text-xs tracking-wide text-white/80">Background.</div>
             <div className="h-px w-full bg-white/25" />
             <div className="mt-6 max-w-md text-xs leading-relaxed text-white/80">
-              Otto has a profound passion for the creative journey, whether it be through photography or music. For
-              him, there&apos;s something truly special about collaborating with others, grasping their vision, and
+              Anna has a profound passion for the creative journey, whether it be through writing or lecturing. For
+              her, there&apos;s something truly special about collaborating with others, grasping their vision, and
               bringing it to life. It&apos;s about transforming concepts into something real. This exchange of
               creativity is profoundly fulfilling.
             </div>

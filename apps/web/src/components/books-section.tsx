@@ -29,7 +29,7 @@ export default function BooksSection({
           </div>
           <div className="col-span-12 md:col-span-5">
             <div className="font-serif leading-[1.05] tracking-tight text-[clamp(20px,4.4vw,40px)]">
-              A curated selection of printed work—editorials, campaigns, and personal projects—brought together in
+              A curated selection of Anna’s printed work—editorials, campaigns, and personal projects—brought together in
               tangible form.
             </div>
             <div className="mt-6 flex sm:mt-8">
