@@ -94,6 +94,7 @@ export default function Home() {
           width={logo.width}
           height={logo.height}
           className="h-10 w-auto sm:h-12"
+          style={{ filter: "brightness(0) invert(1)" }}
         />
       </div>
       <FloatingSectionNav
