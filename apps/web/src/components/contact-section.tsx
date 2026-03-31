@@ -1,6 +1,6 @@
  "use client";
  import type { StaticImageData } from "next/image";
- import { X } from "lucide-react";
+ import { Facebook, Instagram, Linkedin, Twitter, X } from "lucide-react";
  import { useState, type RefObject } from "react";
  
  import FullImageParallaxSection from "./full-image-parallax-section";
@@ -131,18 +131,46 @@
              </div>
            </div>
  
-           <div className="absolute bottom-10 left-6 right-6 hidden text-xs uppercase tracking-wide text-white/80 md:flex md:items-end md:justify-end md:gap-16">
-             <div className="leading-relaxed">
-               <div className="text-white/70">email</div>
-               <div>kante@gmail.com</div>
-               <div className="mt-2 text-white/70 lowercase">write.</div>
-             </div>
-             <div className="leading-relaxed">
-               <div className="text-white/70">phone</div>
-               <div>+31 (0)6 53632545</div>
-               <div className="mt-2 text-white/70 lowercase">call.</div>
-             </div>
-           </div>
+          <div className="absolute bottom-10 left-6 right-6 hidden text-xs uppercase tracking-wide text-white/80 md:flex md:items-end md:justify-end">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/Treenareynoldsofficial"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Facebook"
+                className="grid size-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15"
+              >
+                <Facebook className="size-4" />
+              </a>
+              <a
+                href="https://x.com/Reyn3285Treena"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="X"
+                className="grid size-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15"
+              >
+                <Twitter className="size-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/treenareynoldsofficial/"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="grid size-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15"
+              >
+                <Instagram className="size-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/treena-reynolds-514983284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="LinkedIn"
+                className="grid size-10 place-items-center rounded-full bg-white/10 text-white ring-1 ring-white/15 backdrop-blur transition-colors hover:bg-white/15"
+              >
+                <Linkedin className="size-4" />
+              </a>
+            </div>
+          </div>
          </div>
        </div>
      </FullImageParallaxSection>

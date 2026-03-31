@@ -28,7 +28,7 @@ export default function BackgroundSection({
           </div>
           <div className="col-span-12 md:col-span-5">
             <div className="font-serif leading-[1.05] tracking-tight text-[clamp(20px,4.4vw,40px)]">
-             Creativity has been a defining thread throughout Anna’s life, 
+             Creativity has been a defining thread throughout Treena’s life, 
              evolving seamlessly from one chapter to the next. Whether expressed through her writing or her work as a lecturer, her ability to shape ideas and bring them to life remains constant. Inspired by the structure of language and the rhythm of storytelling, everything 
              she creates flows from the same deep well of imagination within her.
             </div>
@@ -41,10 +41,7 @@ export default function BackgroundSection({
             <div className="mb-6 text-xs tracking-wide text-white/80">Background.</div>
             <div className="h-px w-full bg-white/25" />
             <div className="mt-6 max-w-md text-xs leading-relaxed text-white/80">
-              Anna has a profound passion for the creative journey, whether it be through writing or lecturing. For
-              her, there&apos;s something truly special about collaborating with others, grasping their vision, and
-              bringing it to life. It&apos;s about transforming concepts into something real. This exchange of
-              creativity is profoundly fulfilling.
+              Treena began by capturing moments through the lens of her camera. Later, her work as a transformation energy coach gave her a deeper understanding of how thoughts and stories shape the way people see themselves.
             </div>
           </div>
         </div>

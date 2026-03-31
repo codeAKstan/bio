@@ -25,8 +25,8 @@ export default function AboutSection({
         <div className="grid h-svh grid-cols-12 grid-rows-[auto_1fr_auto] gap-x-4 sm:gap-x-6 py-8 sm:py-10 text-white">
           <div className="col-span-12 flex flex-col gap-4 text-[11px] tracking-wide text-white/80 sm:flex-row sm:items-start sm:justify-between sm:text-xs">
             <div className="leading-relaxed">
-              <div className="break-all uppercase sm:break-normal">ANNA@GMAIL.COM</div>
-              <div>+31 (0)6 53632545</div>
+              {/* <div className="break-all uppercase sm:break-normal">treena@bellainfinita.com</div> */}
+              {/* <div>(720) 990-7246</div> */}
             </div>
             <div className="flex gap-6 uppercase sm:gap-10">
               <div className="leading-relaxed">
@@ -44,7 +44,7 @@ export default function AboutSection({
               </div>
               <div className="leading-relaxed">
                <Link href="/books" className="text-white/70">
-                  books.
+                  book.
                 </Link>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function AboutSection({
 
           <div className="col-span-12 flex items-center justify-center">
             <h1 className="font-serif leading-none tracking-tight text-[clamp(52px,16vw,180px)]">
-              Anna
+              Treena
             </h1>
           </div>
         </div>
@@ -64,7 +64,8 @@ export default function AboutSection({
 
           <div className="col-span-12 md:col-span-7 md:pl-6">
             <div className="max-w-2xl font-serif leading-[1.05] tracking-tight text-[clamp(22px,4.6vw,44px)]">
-              Anna Kate is a writer and lecturer based in the Nigeria. With over two decades of experience, she has collaborated with renowned brands including Nikkie, Esqualo, Junkies Magazine, Ibana, and Rino & Pelle, among others. Her work is driven by a deep passion for storytelling, where she skillfully blends style, lighting, and color to bring creative ideas vividly to life.
+              Treena E. Reynolds is a professional coach and author who blends important lessons with real-life advice, aiming to help people grow. Her work speaks to everyday challenges and small wins.
+              With strong academic training and years of experience, she has helped many find clarity and confidence. Now she brings that same vision to children’s books, blending sharp detail with warmth, humor, and heart.
             </div>
           </div>
 

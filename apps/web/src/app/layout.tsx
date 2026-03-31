@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "bio",
-  description: "bio",
+  title: "Treena E. Reynolds",
+  description: "Treena E. Reynolds is a children's book author and illustrator based in the United States.",
 };
 
 export default function RootLayout({

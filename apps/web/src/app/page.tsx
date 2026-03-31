@@ -1,10 +1,12 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import firstImage from "../first.png";
 import secondImage from "../second.png";
 import thirdImage from "../third.png";
 import fourthImage from "../fourth.png";
+import logo from "../LogoF.png";
 import AboutSection from "@/components/about-section";
 import BackgroundSection from "@/components/background-section";
 import BooksSection from "@/components/books-section";
@@ -84,6 +86,16 @@ export default function Home() {
 
   return (
     <main className="w-full">
+      <div className="fixed left-6 top-6 z-[999]">
+        <Image
+          src={logo}
+          alt="Logo"
+          priority
+          width={logo.width}
+          height={logo.height}
+          className="h-10 w-auto sm:h-12"
+        />
+      </div>
       <FloatingSectionNav
         active={activeNav}
         onClick={() => {
