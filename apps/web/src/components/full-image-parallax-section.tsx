@@ -107,7 +107,7 @@ export default function FullImageParallaxSection({
                 width={image.width}
                 height={image.height}
                 sizes="100vw"
-                className="block h-auto w-full"
+                className="block h-svh w-full object-cover sm:h-auto sm:object-cover"
               />
             </div>
           </div>
