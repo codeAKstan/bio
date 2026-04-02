@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import firstImage from "../first.png";
@@ -30,6 +31,25 @@ export default function Home() {
   );
 
   const [activeNav, setActiveNav] = useState(sections[0]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     let rafId = 0;
@@ -86,7 +106,7 @@ export default function Home() {
 
   return (
     <main className="w-full">
-      <div className="fixed left-6 top-6 z-[999]">
+      <header className="fixed inset-x-0 top-0 z-[999] flex items-start justify-between px-6 pt-6">
         <Image
           src={logo}
           alt="Logo"
@@ -96,7 +116,73 @@ export default function Home() {
           className="h-10 w-auto sm:h-12"
           style={{ filter: "brightness(0) invert(1)" }}
         />
-      </div>
+
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen((open) => !open)}
+          className="grid size-11 place-items-center rounded-full bg-black/40 text-white ring-1 ring-white/10 backdrop-blur transition-colors hover:bg-black/50 sm:hidden"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+        </button>
+      </header>
+
+      {isMenuOpen ? (
+        <div
+          id="mobile-menu"
+          className="fixed inset-0 z-[998] grid content-start bg-black/70 px-6 pt-24 text-white backdrop-blur sm:hidden"
+        >
+          <button
+            type="button"
+            className="absolute inset-0"
+            aria-label="Close menu overlay"
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          <div className="relative w-full rounded-2xl bg-black/50 ring-1 ring-white/10">
+            <div className="border-b border-white/10 px-4 py-3 text-sm font-medium tracking-wide">
+              Menu
+            </div>
+            <div className="p-2">
+              {sections.map((section) => {
+                const isActive = activeNav.id === section.id;
+
+                return (
+                  <button
+                    key={section.id}
+                    type="button"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
+                      history.replaceState(null, "", `#${section.id}`);
+                    }}
+                    className={[
+                      "flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm ring-1 transition-colors",
+                      isActive
+                        ? "bg-white/10 text-white ring-white/15"
+                        : "bg-transparent text-white/80 ring-transparent hover:bg-white/5 hover:text-white",
+                    ].join(" ")}
+                  >
+                    <div className="grid size-8 place-items-center rounded-full bg-white/5 ring-1 ring-white/10">
+                      <Image
+                        src={section.image}
+                        alt=""
+                        width={20}
+                        height={20}
+                        className="size-5 rounded-full object-cover"
+                      />
+                    </div>
+                    <span className="min-w-0 flex-1 truncate">{section.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       <FloatingSectionNav
         active={activeNav}
         onClick={() => {

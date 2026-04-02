@@ -95,7 +95,7 @@ export default function FullImageParallaxSection({
   }, [sectionRef]);
 
   return (
-    <section ref={sectionRef} id={id} className="relative h-[200vh] w-full">
+    <section ref={sectionRef} id={id} className="relative h-svh w-full sm:h-[200vh]">
       <div className="sticky top-0 h-svh w-full overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div ref={bgRef} className="absolute left-0 top-0 w-full will-change-transform">
