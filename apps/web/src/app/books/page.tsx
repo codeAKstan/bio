@@ -16,10 +16,12 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-import coverA from "../../c.png";
-import coverB from "../../first.jpg";
-import coverC from "../../second.webp";
-import coverD from "../../third.webp";
+import book1 from "../../book1.png";
+import book2 from "../../book2.png";
+import book3 from "../../book3.png";
+import book4 from "../../book4.png";
+import book5 from "../../book5.png";
+import book6 from "../../book6.png";
 
 type BookItem = {
   id: string;
@@ -37,7 +39,7 @@ const BOOKS: BookItem[] = [
     price: 9.99,
     inStock: true,
     onSale: true,
-    image: coverB,
+    image: book1,
   },
   {
     id: "immersive-memories",
@@ -45,7 +47,7 @@ const BOOKS: BookItem[] = [
     price: 99.0,
     inStock: true,
     onSale: false,
-    image: coverC,
+    image: book2,
   },
   {
     id: "editorials-vol-1",
@@ -53,7 +55,7 @@ const BOOKS: BookItem[] = [
     price: 49.0,
     inStock: false,
     onSale: false,
-    image: coverD,
+    image: book3,
   },
   {
     id: "campaign-notes",
@@ -61,7 +63,7 @@ const BOOKS: BookItem[] = [
     price: 35.0,
     inStock: true,
     onSale: false,
-    image: coverA,
+    image: book4,
   },
   {
     id: "limited-edition",
@@ -69,7 +71,7 @@ const BOOKS: BookItem[] = [
     price: 120.0,
     inStock: true,
     onSale: true,
-    image: coverC,
+    image: book5,
   },
   {
     id: "studio-journal",
@@ -77,7 +79,7 @@ const BOOKS: BookItem[] = [
     price: 24.0,
     inStock: true,
     onSale: false,
-    image: coverB,
+    image: book6,
   },
   {
     id: "sequencing-and-pace",
@@ -85,7 +87,7 @@ const BOOKS: BookItem[] = [
     price: 59.0,
     inStock: false,
     onSale: true,
-    image: coverD,
+    image: book1,
   },
   {
     id: "collaboration-series",
@@ -93,7 +95,7 @@ const BOOKS: BookItem[] = [
     price: 79.0,
     inStock: true,
     onSale: false,
-    image: coverA,
+    image: book2,
   },
   {
     id: "personal-work",
@@ -101,7 +103,7 @@ const BOOKS: BookItem[] = [
     price: 89.0,
     inStock: true,
     onSale: false,
-    image: coverC,
+    image: book3,
   },
   {
     id: "special-edition",
@@ -109,7 +111,7 @@ const BOOKS: BookItem[] = [
     price: 149.0,
     inStock: true,
     onSale: true,
-    image: coverD,
+    image: book4,
   },
   {
     id: "proofs",
@@ -117,7 +119,7 @@ const BOOKS: BookItem[] = [
     price: 29.0,
     inStock: false,
     onSale: false,
-    image: coverB,
+    image: book5,
   },
   {
     id: "body-of-work",
@@ -125,7 +127,7 @@ const BOOKS: BookItem[] = [
     price: 109.0,
     inStock: true,
     onSale: false,
-    image: coverA,
+    image: book6,
   },
 ];
 
